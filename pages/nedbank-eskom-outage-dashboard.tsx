@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button';
 import { Input } from '../components/ui/Input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/Select';
 import { AlertCircle, MapPin, Clock, Zap } from 'lucide-react';
-
+import styles from './styling.module.css'
 const provinces = [
   "Eastern Cape", "Free State", "Gauteng", "KwaZulu-Natal", "Limpopo",
   "Mpumalanga", "North West", "Northern Cape", "Western Cape"
@@ -60,9 +60,9 @@ const NedbankEskomOutageDashboard = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
+    <div className="p-4 bg-white-100 min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Nedbank Eskom Outage Dashboard</h1>
-      <div className="flex space-x-2 mb-4">
+      <div className={`flex space-x-2 mb-4 ${styles.Button}`}>
         {['Day', 'Week', 'Month'].map((range) => (
           <Button
             key={range}
@@ -73,7 +73,7 @@ const NedbankEskomOutageDashboard = () => {
           </Button>
         ))}
       </div>
-      <div className="flex space-x-2 mb-4">
+      <div className={`flex space-x-2 mb-4 ${styles.Period}`}>
         <Input
           type="date"
           value={startDate}
@@ -87,7 +87,8 @@ const NedbankEskomOutageDashboard = () => {
           className="max-w-xs"
         />
       </div>
-      <div className="flex space-x-2 mb-4">
+      <div className={`flex space-x-2 mb-4 ${styles.Select}`}>
+        {/*
         <Select onValueChange={setSelectedProvince}>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select Province" />
@@ -98,6 +99,7 @@ const NedbankEskomOutageDashboard = () => {
             ))}
           </SelectContent>
         </Select>
+        */}
         <Input
           type="text"
           placeholder="Search Nedbank branches..."
@@ -110,7 +112,7 @@ const NedbankEskomOutageDashboard = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <div className="text-sm font-medium">Total Outages</div>
-            <Zap className="h-4 w-4 text-yellow-500" />
+            <Zap className="h-4 w-4 text-yellow-500 text-right" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{data.totalOutages}</div>
@@ -120,7 +122,7 @@ const NedbankEskomOutageDashboard = () => {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <div className="text-sm font-medium">Extended Outages</div>
-            <AlertCircle className="h-4 w-4 text-red-500" />
+            <AlertCircle className="h-4 w-4 text-red-500 justify-end" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{data.extendedOutages}</div>

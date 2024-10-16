@@ -1,0 +1,61 @@
+/* Card.module.css */
+
+/* Card Styles */
+.card {
+    margin: .5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc; /* Light grey border */
+    background-color: #ffffff; /* White background for better visibility */
+    color: #333333; /* Dark text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow for more visibility */
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  }
+  
+  /* Header */
+  .cardHeader {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa; /* Light grey background for header */
+  }
+  
+  /* Title */
+  .cardTitle {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: #111; /* Darker text color */
+  }
+  
+  /* Description */
+  .cardDescription {
+    text-align: right;
+    font-size: 0.875rem;
+    color: #666; /* Muted, but visible text color */
+  }
+  
+  /* Content */
+  .cardContent {
+    text-align: right;
+    padding: 1.5rem;
+    padding-top: 0;
+    color: #333; /* Ensure content text is visible */
+  }
+  
+  /* Footer */
+  .cardFooter {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    padding-top: 0;
+    background-color: green; /* Slightly lighter footer background */
+  }
+  

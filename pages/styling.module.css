@@ -1,0 +1,45 @@
+.Container{
+    padding: 4;
+    background-color: white;
+
+}
+
+.Button>button{
+    margin: .5rem;
+    background-color: white;
+    color: black;
+    border: 1px green solid;
+}
+
+.Button>button :hover{
+    background-color: green;
+
+}
+
+.Period>input{
+    margin: 0 .5rem;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    box-shadow: 1px 1px 1px 1px rgb(145, 145, 145);
+}
+
+.Select{
+    padding: .5rem;
+    
+}
+
+.Select>Select{
+    margin:0 5rem;
+    display: block;
+}
+.Select>input{
+    margin: .5rem;
+    border-radius: 4px;
+    width: 80%;
+    height: 10%;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(114, 114, 114);
+    padding: 8px;
+}

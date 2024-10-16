@@ -5,9 +5,9 @@ function App() {
   
 
   return (
-    <>
+    <div className='Container'>
       <NedbankEskomOutageDashboard  />
-    </>
+    </div>
   )
 }
 
